@@ -6,12 +6,15 @@
  * Time: 11:02
  */
 
-if (!is_numeric($age) || $age < 0) {
-    echo "Неизвестный возраст";
-} elseif ($age >= 0 && $age <= 17) {
+if(($age >= 0)&&($age < 18)){
     echo "Вам еще рано работать";
-} elseif ($age >= 18 && $age <= 59) {
+}
+elseif(($age > 17)&&($age < 60)){
     echo "Вам еще работать и работать";
-} elseif ($age > 59) {
+}
+elseif($age > 59){
     echo "Вам пора на пенсию";
+}
+else{
+    echo "Неизвестный возраст";
 }
